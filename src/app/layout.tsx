@@ -7,10 +7,25 @@ import { Logo } from "@/components/logo";
 import { env } from "@/lib/env";
 import "./globals.css";
 
+const title = "Admit: tickets, paid in stablecoins";
+const description = "A demo ticketing platform that takes tUSD8 on QDay Aevum through Aevify, from people and from AI agents.";
+
 export const metadata: Metadata = {
-  title: { default: "Admit: tickets, paid in stablecoins", template: "%s · Admit" },
-  description: "A demo ticketing platform that takes tUSD8 on QDay Aevum through Aevify, from people and from AI agents.",
+  // Absolute base for link previews: STORE_URL, else Vercel's production domain.
+  metadataBase: new URL(env.storeUrl() ?? "https://aevify-demo-store.vercel.app"),
+  title: { default: title, template: "%s · Admit" },
+  description,
   icons: { icon: "/favicon.svg" },
+  openGraph: {
+    type: "website",
+    siteName: "Admit",
+    title,
+    description,
+    url: "/",
+    // Regenerate with scripts/og-image.py (renders /dev/og).
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Admit: tickets, paid in stablecoins" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

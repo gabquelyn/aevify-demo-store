@@ -7,7 +7,7 @@
 
 | | |
 |---|---|
-| **Live demo** | https://aevify-demo-store.vercel.app |
+| **Live demo** | https://YOUR-STORE.vercel.app |
 | **Payments** | [Aevify](https://aevify.vercel.app) ([docs](https://aevify.vercel.app/docs)) |
 | **Packages used** | `@aevify/node` (server), `@aevify/react` (Pay button and modal) |
 | **Network** | QDay Aevum Testnet (chain ID 44005), tUSD8 |
@@ -113,8 +113,8 @@ In the [Aevify dashboard](https://aevify.vercel.app/dashboard), sign in and:
 2. **Developers → Create secret key**, and put it in `AEVIFY_SECRET_KEY`.
 3. Copy the **publishable key** into `AEVIFY_PUBLISHABLE_KEY`.
 4. Copy the **webhook signing secret** into `AEVIFY_WEBHOOK_SECRET`.
-5. **Webhooks → Endpoint URL:** `https://aevify-demo-store.vercel.app/api/aevify/webhook`.
-6. **Allowed domains:** add `https://aevify-demo-store.vercel.app` so the checkout modal can open. For
+5. **Webhooks → Endpoint URL:** `https://YOUR-STORE.vercel.app/api/aevify/webhook`.
+6. **Allowed domains:** add `https://YOUR-STORE.vercel.app` so the checkout modal can open. For
    local development against the live Aevify, also add `http://localhost:3001`.
 
 Then open `/api/health`: every check should be `ok` or `true`.
