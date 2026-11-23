@@ -1,0 +1,39 @@
+{
+  "name": "aevify-demo-store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Admit: a demo ticketing platform that takes tUSD8 on QDay Aevum through Aevify, from people and an AI agent.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "agent": "tsx scripts/agent.ts"
+  },
+  "dependencies": {
+    "@aevify/node": "^0.1.0",
+    "@aevify/react": "^0.1.0",
+    "geist": "^1.9.2",
+    "mongodb": "^7.9.1",
+    "next": "^16.4.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "viem": "^2.58.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.1"
+  }
+}
